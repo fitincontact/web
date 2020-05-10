@@ -1,0 +1,8 @@
+let lang = require("./ru")
+let animal = {
+    walk() {
+        console.log(lang.run)
+    }
+}
+console.log('Animal4', lang.loaded)
+module.exports = animal

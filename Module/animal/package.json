@@ -1,0 +1,14 @@
+{
+  "name": "animal_module2_tst",
+  "version": "0.0.3",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "fitincontact",
+  "license": "ISC",
+  "dependencies": {
+    "animal_module2": "0.0.3"
+  }
+}
