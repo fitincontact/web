@@ -8,6 +8,6 @@ npm init
 npm publish
 npm login
 npm publish
-npm i module_name
+npm i animal_module
 cd node_modules
 */
