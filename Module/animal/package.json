@@ -9,6 +9,10 @@
   "author": "fitincontact",
   "license": "ISC",
   "dependencies": {
-    "animal_module2": "0.0.3"
+    "animal_module2": "0.0.3",
+    "debug": "^4.1.1"
+  },
+  "devDependencies": {
+    "winston": "^3.2.1"
   }
 }
