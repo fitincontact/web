@@ -1,5 +1,6 @@
 /*
-
+https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Promise
+Объект Promise (промис) используется для отложенных и асинхронных вычислений.
 синтаксис:
 let promise = new Promise(
     function (resolve, reject) {
@@ -16,10 +17,13 @@ onRejected - функция которая будет вызвана с ошиб
 */
 let promise = new Promise((resolve, reject) => {
         setTimeout(() => {
-                resolve('correct')
-                //reject(new Error('timeOut'))
+                if (true) {
+                    resolve('correct')
+                } else {
+                    reject(new Error('timeOut'))
+                }
             },
-            500
+            5000
         )
     }
 )
@@ -30,8 +34,8 @@ promise.then(
 //
 let promise2 = new Promise((resolve, reject) => {
         setTimeout(() => {
-                resolve('correct')
-                //reject(new Error('timeOut'))
+                //resolve('correct')
+                reject(new Error('timeOut'))
             },
             500
         )
@@ -50,7 +54,7 @@ promise2
 если catch:
 обработчик catch(onRejected) получает ошибку и должен обработать ее:
 два варианта:
-1. если ошибка не критичная то onRejected возваращает значение через return и управление переходит в следующий .then(onFullFilled)
+1. если ошибка не критичная то onRejected возвращает значение через return и управление переходит в следующий .then(onFullFilled)
 2. если ошибка критичная и продолжать с ней нельзя то он делает throw и управление переходит в следующий catch(onRejected)
 */
 

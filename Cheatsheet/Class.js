@@ -1,4 +1,4 @@
-//prototype-deprication
+console.log(`// prototype-deprecation:`)
 function F() {
     this.v = 42
 }
@@ -12,9 +12,10 @@ function B() {
 }
 
 B.prototype = new F()
-B.prototype.f = 'Hello World'
+B.prototype.ddd = 'Hello World'
 var test = new B()
 console.log(test.v)
+console.log(test.ddd)
 /*
 * в ES5 для прототипа был метод геттер:
 * Object.getPrototypeOf(obj)
@@ -23,7 +24,7 @@ console.log(test.v)
 * ...  а так же узаконено свойство __proto__ которое дает прямой доступ к прототипу
 * */
 
-//super
+console.log(`// super:`)
 let animal = {
     walk() {
         console.log("run")
@@ -32,6 +33,7 @@ let animal = {
 let rabbit = {
     __proto__: animal,
     walk() {
+        console.log(`// rabbit:`)
         super.walk()
     }
 }
@@ -40,7 +42,7 @@ rabbit.walk()
 let walk = rabbit.walk
 walk()
 
-//Class
+console.log(`// Class:`)
 class User {
     constructor(name) {
         this.name = name
@@ -51,11 +53,11 @@ class User {
     }
 }
 
-let u = new User('Jon')
+let u = new User('John')
 u.say()
 new User('jjjjjj').say()
 
-//
+console.log(`// User2:`)
 class User2 {
     constructor(first, last) {
         this.first = first
@@ -71,13 +73,13 @@ class User2 {
     }
 }
 
-let u3 = new User2('Jon', 'Don')
-console.log(u3)
-console.log(u3.fullName)
-u3.fullName = 'ffff gggg'
-console.log(u3.fullName)
+let u2 = new User2('Jon', 'Don')
+console.log(u2)
+console.log(u2.fullName)
+u2.fullName = 'ffff gggg'
+console.log(u2.fullName)
 
-//
+console.log(`// User3:`)
 class User3 {
     constructor(first, last) {
         this.first = first
@@ -89,10 +91,10 @@ class User3 {
     }
 }
 
-let u4 = User3.genUser()
-console.log(u4)
+let u3 = User3.genUser()
+console.log(u3)
 
-//
+console.log(`// extends:`)
 class Animal {
     constructor(name) {
         this.name = name
@@ -106,7 +108,7 @@ class Animal {
 class Mouse extends Animal {
     walk() {
         super.walk()
-        console.log(' and pisk')
+        console.log('and pisk')
     }
 }
 
